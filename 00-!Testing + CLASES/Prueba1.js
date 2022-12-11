@@ -1,30 +1,24 @@
-function esPrimo(numero) {
-    var primo = true;
+function empiezaConNueve(n) {
+  absoluto = Math.pow(n**2, 0.5)
+  largoNumero = absoluto.toString().length
+  numero = absoluto / Math.pow(10, largoNumero-1)
 
-    if(numero<=1) {
-        primo = false
-        return primo
-    }    
-    else if(numero>1){
+  if(numero % 9 < 1 && numero !=0){
+    return true
+  } 
+  return false
 
-        for (var i = 2; i < numero; i++) {
-            if(numero%i ===0){
-                primo = false
-                break
-            }
-        }
-    return primo   
-    }
+}
+
+array = []
+
+for (i=-100; i< 190; i++) {
+  if(empiezaConNueve(i) ===true){
+      matrix = []
+      matrix.push(i)
+      matrix.push(empiezaConNueve(i))
+      array.push(matrix)
   }
-primesArray = []
+}
 
-for( var i = -100 ; i <100; i++) 
-  if (esPrimo(i) === true){
-    primesArray.push(i)
-  }
-
-qtyPrimos = primesArray.length
-
-console.log(...primesArray)
-console.log('Hay un total de '+ qtyPrimos+ ' numeros primos')
-
+console.log(array)

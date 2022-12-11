@@ -193,8 +193,7 @@ function esPrimo(numero) {
   if(numero<=1) {
       primo = false
       return primo
-  }
-  
+  }    
   else if(numero>1){
 
       for (var i = 2; i < numero; i++) {
@@ -203,8 +202,8 @@ function esPrimo(numero) {
               break
           }
       }
-  return primo   
   }
+return primo
 }
 
 
