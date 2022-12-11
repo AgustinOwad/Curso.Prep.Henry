@@ -1,24 +1,63 @@
-function empiezaConNueve(n) {
-  absoluto = Math.pow(n**2, 0.5)
-  largoNumero = absoluto.toString().length
-  numero = absoluto / Math.pow(10, largoNumero-1)
+function agregarMetodoCalculoDescuento(producto) {
+  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // El método resta el descuento del precio y devuelve el precio con descuento
+  // Devuelve el objeto "producto" al final de la función
+  // Ejemplo:
+  // producto.precio -> 20
+  // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
+  // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
+  // Tu código:
 
-  if(numero % 9 < 1 && numero !=0){
-    return true
-  } 
-  return false
-
+  producto.calcularPrecioDescuento = function calcularPrecioDescuento() {
+    var precioDescuento = this.precio * (1 - this.porcentajeDeDescuento)
+    return precioDescuento
+  }
+  return producto
 }
 
-array = []
+var objeto = {
+  a : 2,
+  b : 3,
+  f : function(){console.log('Funcion')},
+  numeroMisterioso : 2,
+}
 
-for (i=-100; i< 190; i++) {
-  if(empiezaConNueve(i) ===true){
-      matrix = []
-      matrix.push(i)
-      matrix.push(empiezaConNueve(i))
-      array.push(matrix)
+var Usuario = {
+  nombre : 'Agustin',
+  email : 'ing.owad@gmail.com',
+  password : 'Agustin22',
+  amigos : ['toni', 'peter'],
+  esPremium : false,
+  posts : [{postid:'001',likes:35},{postid:'002',likes:32},{postid:'003',likes:19}]
+}
+
+var Usuario1 = {
+  nombre : 'Agustin',
+  email : 'ing.owad@gmail.com',
+  password : 'Agustin22',
+  amigos : ['toni', 'peter'],
+  esPremium : false
+}
+
+var   Usuario2 = {
+  nombre : 'Juan',
+  email : 'ing.juan@gmail.com',
+  password : 'Juan22',
+  amigos : ['Isabel', 'Licha'],
+  esPremium : false
+}
+
+var producto = {
+  precio : 140,
+  porcentajeDeDescuento : 0.1, 
+  DescuentoNativo : function(){
+    var precioDescuento = this.precio * this.porcentajeDeDescuento
+    return precioDescuento
   }
 }
 
-console.log(array)
+
+var usuarios = [Usuario1, Usuario2]
+
+console.log(agregarMetodoCalculoDescuento(producto))
