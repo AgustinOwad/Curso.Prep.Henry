@@ -1,18 +1,24 @@
-class Usuario {
-  constructor (usuario, nombre, email, password){
-    this.usuario = usuario
-    this.nombre = nombre
-    this.email = email
-    this.password = password
+function map(array, cb) {
+  // Crea un nuevo array
+  // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
+  // El nuevo array debe tener la misma longitud que el array del argumento
+  //Tu código:
+
+  let arrayNuevo = []
+
+  for ( i = 0  ; i< array.length ; i++) {
+    arrayNuevo.push(cb(array[i]))
   }
-  
-  saludar (){ 
-    return 'Hola, mi nombre es '+this.nombre
-  }
+
+  return arrayNuevo
 }
 
+function x2 (numero) {
+  return numero**2
+}
 
-var user = new Usuario('Js2', 'Juan', 'juan@gmail.com','Juan223')
+var matriz = [1, 2, 3, 4, 5]
+var palabras = ['agus', 'pancitos', 'ali', 'termo', 'aliexpress', 'ala']
 
 
-console.log(user.usuario)
+console.log(map(matriz,x2))
