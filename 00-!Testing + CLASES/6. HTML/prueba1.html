@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <head>  
+        <title>Aguante Boca</title>
+        <meta charset="utf-8"> <!-- esto es para que nos reconozca los acentos y otros caracteres raros.-->
+        <meta name = "keywords" content="Boca, Juniors, Boquita, Club, Atletico"> <!-- esto le da a la pagina las palabras clave de busqueda para que figuere bien arriba en las busquedas SEO.-->
+        <meta name="description" content = 'Aguante boca es una pagina creada por A.Owad como prueba.'
+        <meta name = "author" content = 'Agustin Owad'>
+        <meta name = "copyright" content = 'AWAD.inc'>
+
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li> <a href="prueba1.html">Inicio</a></li>
+                    <li> <a href="prueba2.html">Mi cuenta</a></li>
+                    <li> <a href="prueba3.html">Tips & Tricks</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Los Owad!!</h1> //hay de h1 a h6! Se pone un solo h1. Se ajustan al tamaño de la pagina total o de la etiqueta que la contiene.
+        <h2>Los Owad!!</h2>
+        <h3>Los Owad!!</h3>
+        <h4>Los Owad!!</h4>
+        <h5>Los Owad!!</h5>
+        <h6>Los Owad!!</h6>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br><br><br>Ullam dolore quidem neque quisquam, debitis asperiores minima veniam, quae ipsam fugiat quo provident eveniet dolores perspiciatis voluptas.<br> Consequatur debitis exercitationem odit!</p>
+        <b>negrita</b>
+        <i>italica</i>
+        <strike>tachado</strike>
+        <small>chiquita</small>
+
+        <a href="https://facebook.com">Hace click aqui!</a> //esto es una referencia!
+        <a href="prueba2.html">Hace click aqui!</a> //esto es una referencia a otro archivo!
+        <a href="../prueba2.html">Hace click aqui!</a> //Asi vamos una carpeta hacia atras y buscamos un archivo!
+        <a href="https://google.com.ar" target = '_blank'>Hace click aqui!</a> //Asi abrimos en otra pestaña
+        <br><br><br>
+        
+        <p>Esto es un texto tremendo!
+            <span style="Color: blue">, y esto es un span dentro del parrafo!  </span>
+        </p>
+
+        <br><br>//LISTAS
+
+        <ul> //lista desordenada
+            <li>pan</li>
+            <li>harina</li>
+            <li>leche</li>
+            <li>caca</li>
+        </ul>
+
+        <ol> //lista ordenada
+            <li>pan</li>
+            <li>harina</li>
+            <li>leche</li>
+            <li>caca</li>
+        </ol>
+
+        <br><br> 
+
+        <h2>pongamos una <b>imagen</b></h2>
+
+        <img src="https://radio3cadenapatagonia.com.ar/wp-content/uploads/2020/05/BOMBONERA-1-1024x691.jpg">
+
+        <h2>pongamos un <b>VIDEO</b></h2>
+
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/CDV2AwOeeis" title="Como insertar un video de YOUTUBE en HTML - sencillo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h2>pongamos un <b>VIDEO</b> que no sea de youtube!</h2>
+
+        <video src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" controls=></video>
+
+        <h2>Para un <b>AUDIO/b> es lo mismo!!</h2>
+
+        <audio src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" controls=></audio>
+
+        <h2>Empecemos con los DIV! El uso real esta en CSS</h2>
+
+        <div>
+            <h2> Subtitulo del div</h2>
+            <p> Hola como estas? Esto es un parrafo del div que creamos!</p>
+        </div>
+
+        <h2>EMPECEMOS CON FORMS AHORA</h2>
+        <p>En informatica podemos separar los datos en inputs, procesamiento y outputs. El input es algo que nos da el usuario por ejemplo, lo procesamos y devolvemo algo!</p>
+
+        <form method="post"> <!-- el metodo post es para mandar todos los datos al servidor!-->
+            <input type="text" name ='nombreUser'>
+            <input type="text" name ='apellidoUser'>
+            <input type="email" name ='emailUser'>
+            <input type="password" name ='passwordUser'>
+            <input type="number" name ='DNIUser'>
+            <input type="color" name ='eleccionColor'>
+            <input type="range" name ='rango' min="0" max="2" step="0.5">
+            <input type="date" name ='fecha'>
+            <input type="time" name ='hora'>
+            <input type="button" name ='boton' value="Boton">
+            <input type="submit" name="subirTodo" value="Submit all data colected">
+            <textarea name="texto1" id="t1" cols="30" rows="4" readonly> Hola Juan Roman Riquelme! Como estas viejo?</textarea>
+        </form>
+
+    </body>
+
+
+</html>
